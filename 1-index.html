@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>달의 정원사 - 복셀 달빛 정원 방치형 게임</title>
+<meta name="description" content="달빛을 모아 식물을 키우는 복셀 3D 힐링 방치형 클리커 게임">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"./three.module.min.js"}}</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud">
+  <div id="top">
+    <div class="res"><span class="ico">🌙</span><div><b id="moon">0</b><small id="rate">+0/초</small></div></div>
+    <div class="res small"><span class="ico">⭐</span><b id="stars">0</b></div>
+    <div class="res small"><span class="ico">🌑</span><b id="lunar">0</b></div>
+    <div class="res clock"><b id="tod">낮</b><small id="phase">상현달</small><div id="todbar"><i id="todfill"></i></div></div>
+  </div>
+  <div id="banner"></div>
+  <div id="actives"></div>
+  <div id="plotpanel" class="hidden"></div>
+  <div id="tabs">
+    <button data-tab="garden">🌱<span>정원</span></button>
+    <button data-tab="shop">🏯<span>경관</span></button>
+    <button data-tab="auto">✨<span>자동화</span></button>
+    <button data-tab="skills">🌿<span>스킬<em id="spbadge"></em></span></button>
+    <button data-tab="dex">📖<span>도감</span></button>
+    <button data-tab="alch">⚗️<span>연금술</span></button>
+    <button data-tab="prestige">🌑<span>환생</span></button>
+    <button data-tab="settings">⚙️<span>설정</span></button>
+  </div>
+  <div id="panel" class="hidden"><div id="panelhead"><b id="paneltitle"></b><button id="panelclose">✕</button></div><div id="panelbody"></div></div>
+  <div id="floaters"></div>
+  <div id="toasts"></div>
+</div>
+<div id="modal" class="hidden"><div id="modalbox"></div></div>
+<div id="intro"><div class="introbox"><h1>달의 정원사</h1><p>복셀 달빛 정원을 가꾸는 방치형 힐링 게임</p><button id="start">정원으로 들어가기</button><small>소리가 재생됩니다 · 자동 저장</small></div></div>
+<noscript>이 게임은 JavaScript가 필요합니다.</noscript>
+<script type="module" src="main.js"></script>
+</body>
+</html>
